@@ -6,18 +6,22 @@ public class Main
     {
         ArrayList<String> words = new ArrayList<String>();
 
-        words.add("D");
-        words.add("Du");
-        words.add("Duc");
-        words.add("Duck");
-
+        words.add("catch");
+        words.add("bobcat");
+        words.add("catchacat");
+        words.add("cat");
+        words.add("at");
 
 
         System.out.println(words);
 
         WordChecker x = new WordChecker(words);
-        System.out.println(x.getwordList());
-        boolean wordChecker = x.isWordChain();
-        System.out.println(wordChecker);
+        
+        
+        System.out.println(x.createList("cat"));
+
+        System.out.println(x.createList("catch"));
+
+        System.out.println(x.createList("dog"));
     }
 }
