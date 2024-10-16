@@ -45,9 +45,27 @@ public class WordChecker {
      * Items appear in the returned list in the same order as they appear in
      * wordList.
      */
-    //public ArrayList<String> createList(String target) 
+    public ArrayList<String> createList(String target) 
     {
+        ArrayList<String> createdList = new ArrayList<String>();
+        
+        int targetLen = target.length();
 
+        for (int i = 0; i < wordList.size(); i++)
+        {
+            String current = wordList.get(i);
+
+            //If the target string's element appears in the first elements of a word in the list, this bit of code adds said element from the list without the tatget's elements into a new list
+            //If that condition isn't true, no new element gets added into the new list
+            if (current.indexOf(target) == 0)
+            {
+                String add = current.substring(targetLen);
+
+                createdList.add(add);
+            }
+            
+        } 
+        return createdList;
     }
 
     //This command will tell you what is inside the list
