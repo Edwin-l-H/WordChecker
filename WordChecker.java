@@ -51,10 +51,8 @@ public class WordChecker {
         
         int targetLen = target.length();
 
-        for (int i = 0; i < wordList.size(); i++)
+        for (String current : wordList)
         {
-            String current = wordList.get(i);
-
             //If the target string's element appears in the first elements of a word in the list, this bit of code adds said element from the list without the tatget's elements into a new list
             //If that condition isn't true, no new element gets added into the new list
             if (current.indexOf(target) == 0)
